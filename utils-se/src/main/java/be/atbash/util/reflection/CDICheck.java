@@ -1,5 +1,5 @@
 /*
- * Copyright 2014-2018 Rudy De Busscher (https://www.atbash.be)
+ * Copyright 2014-2022 Rudy De Busscher (https://www.atbash.be)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,8 +28,10 @@ public final class CDICheck {
 
     /**
      * Are we running within a CDI container or not.
+     * @deprecated Use the CDICheck class from utils-cdi artifact.
      * @return true when e are running within CDi container.
      */
+    @Deprecated
     public static boolean withinContainer() {
         String forcedResult = System.getProperty("atbash.utils.cdi.check");
         if (StringUtils.hasText(forcedResult)) {
